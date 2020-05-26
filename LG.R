@@ -6,11 +6,11 @@ library(ggplot2)
 library(forecast)
 
 # reading raw data
-augaliniai <- fread("C:/Users/ezys0/Desktop/LG/data/Total-Augaliniai.csv", header = TRUE) 
-kkuras     <- fread("C:/Users/ezys0/Desktop/LG/data/Total-Kietasiskuras.csv", header = TRUE) 
-maistas    <- fread("C:/Users/ezys0/Desktop/LG/data/Total-Maistoproduktai.csv", header = TRUE) 
-mediena    <- fread("C:/Users/ezys0/Desktop/LG/data/Total-Mediena.csv", header = TRUE) 
-nafta      <- fread("C:/Users/ezys0/Desktop/LG/data/Total-Nafta.csv", header = TRUE) 
+augaliniai <- fread(".../Total-Augaliniai.csv", header = TRUE) 
+kkuras     <- fread(".../Total-Kietasiskuras.csv", header = TRUE) 
+maistas    <- fread(".../Total-Maistoproduktai.csv", header = TRUE) 
+mediena    <- fread(".../Total-Mediena.csv", header = TRUE) 
+nafta      <- fread(".../Total-Nafta.csv", header = TRUE) 
 
 
 # join data into one data set
@@ -103,11 +103,11 @@ final$nafta_upper <- pnaftaf$upper
 
 
 
-write.csv(ttest,"C:/Users/ezys0/Desktop/LG/data/trainingtest.csv",row.names = FALSE)
+write.csv(ttest,".../trainingtest.csv",row.names = FALSE)
 
-write.csv(error_check,"C:/Users/ezys0/Desktop/LG/data/error_check.csv",row.names = FALSE)
+write.csv(error_check,".../error_check.csv",row.names = FALSE)
 
-write.csv(final,"C:/Users/ezys0/Desktop/LG/data/final.csv",row.names = FALSE)
+write.csv(final,".../final.csv",row.names = FALSE)
 
 
 
